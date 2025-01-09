@@ -2,7 +2,7 @@
 #SingleInstance Force
 
 MediaAudio := ["spotify.exe", "chrome.exe", "firefox.exe"]
-ChatAudio := ["discord.exe, zoom.exe"]
+ChatAudio := ["discord.exe", "zoom.exe"]
 
 AudioStep := 0.05
 ToggleMute := 2 ; Argument for switching mute status to opposite one
@@ -36,14 +36,13 @@ InstantReplayKeybind := "^!{F12}"
 
 !F20:: {
     ProcessName := WinGetProcessName("A")
-    MsgBox(ProcessName)
     Run("nircmd.exe muteappvolume " ProcessName " " ToggleMute, , "Hide")
 }
 
 !F21:: {
     
 }
-!F22::Run "code.exe"
+!F22::
 !F23::Run "explorer"
 !F24::Run "chrome.exe https://www.google.com --new-window"
 
